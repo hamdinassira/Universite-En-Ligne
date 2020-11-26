@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gg"
+    }
+  },
+  "defaultProject": "gg",
+  "cli": {
+    "analytics": "9bf8c287-8a28-4b59-acf3-5cb6e61902b7"
+  }
 }
