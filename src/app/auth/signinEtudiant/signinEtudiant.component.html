@@ -1,0 +1,61 @@
+<div class="d-flex align-items-center justify-content-center" style="height:100vh">
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+          <div class="card w-100" >
+            <div class="card-header">
+              <h3> Login etudiant </h3>
+              <div class="d-flex justify-content-end social_icon">
+                <span><i class="fab fa-facebook-square"></i></span>
+                <span><i class="fab fa-google-plus-square"></i></span>
+                <span><i class="fab fa-twitter-square"></i></span>
+              </div>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="input-group form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="email"
+                    [(ngModel)]="etudiant.email"
+                    name="email"
+                  />
+                </div>
+                <div class="input-group form-group">
+                
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="password"
+                    name="password"
+                    [(ngModel)]="etudiant.password"
+                  />
+                </div>
+                <div class="row align-items-center remember">
+                  <input type="checkbox" />Remember Me
+                </div>
+                <div class="form-group">
+                  <input
+                    type="button"
+                    value="Login"
+                    class="btn float-right btn-primary login_btn"
+                    (click)="login()"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-center links">
+                Don't have an account? <a [routerLink]="'/auth/signupEtudiant'"> Sign Up </a>
+              </div>
+              <div class="d-flex justify-content-center" (click)="resetPwd()">
+                <p class="text-white" style="cursor: pointer;">
+                  Forgot your password?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>

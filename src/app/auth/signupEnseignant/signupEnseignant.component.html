@@ -1,0 +1,131 @@
+<div class="pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Nouveau Enseignant</h1>
+</div>
+<form #addForm="ngForm" (ngSubmit)="addForm.form.valid && save()">
+    <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+
+                    <input type="text"  name="CIN" class="form-control" placeholder="Numero CIN"
+                        [(ngModel)]="enseignant.CIN" #cin="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && cin.invalid }" 
+                        required  minlength="8"  maxlength="8" pattern="[0-9]{8}">
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && cin.invalid">
+                        <p *ngIf="cin.errors.required">CIN is required</p>
+                        <p *ngIf="cin.errors.pattern">CIN must be only number</p>
+                        <p *ngIf="cin.errors.minlength && cin.errors.maxlength">CIN must be 8 number</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="Name" class="form-control" placeholder="Nom et Prenom"
+                        [(ngModel)]="enseignant.Nom" #firstName="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && firstName.invalid }" required>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && firstName.invalid">
+                        <p *ngIf="firstName.errors.required">Name is required</p>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+
+                    <input type="date" class="form-control" name="date" placeholder="Date de naissande"
+                        [(ngModel)]="enseignant.DateDeNaissance" #date="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && date.invalid }" required min="1970-01-01" max="2002-12-31">
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && date.invalid">
+                        <p *ngIf="date.errors.required">Date is required</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+
+                    <input type="text" class="form-control" name="phone" placeholder="Telephone"
+                        [(ngModel)]="enseignant.Telephone" #phone="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && phone.invalid }" maxlength="13" pattern="[0-9]{8,13}" required>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && phone.invalid">
+                        <p *ngIf="phone.errors.required">Phone is required</p>
+                        <p *ngIf="phone.errors.pattern">Phone must contain only numbers</p>
+                        <p *ngIf="phone.errors.maxlength">Phone must contain  13 digits</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="sexe"> Sexe:</label>
+                    <select  name="sexe" class="form-control" [(ngModel)]="enseignant.sexe" #sexe="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && sexe.invalid }" required size="1"> 
+                        <option selected>Femme</option>
+                        <option>Homme</option>
+                    </select>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && sexe.invalid">
+                        <p *ngIf="sexe.errors.required">Sexe is required</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="pays" > Pays:</label>
+                    <select type="text" name="pays" class="form-control" [(ngModel)]="enseignant.pays" #pays="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && pays.invalid }" required >
+                        <option >Tunisie</option>
+                        <option >Algerie</option>
+                        <option >Maroc</option>
+                        <option>France</option>
+                        <option>Canada</option>
+                        <option >Allemagne</option>
+                    </select>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && pays.invalid">
+                        <p *ngIf="pays.errors.required">Pays is required</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" name="adresse" class="form-control" [(ngModel)]="enseignant.adresse"
+                        placeholder="Adresse" #adresse="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && adresse.invalid }" required>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && adresse.invalid">
+                        <p *ngIf="adresse.errors.required">Adress is required</p>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <input type="text" name="grade" class="form-control" [(ngModel)]="enseignant.grade"
+                        placeholder="Grade" #grade="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && grade.invalid }" required>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && grade.invalid">
+                        <p *ngIf="grade.errors.required">Grade is required</p>
+                    </div>
+                </div>
+            
+                <div class="form-group col-md-12">
+                    <input type="email" class="form-control" name="email" placeholder="email"
+                        [(ngModel)]="enseignant.email" #email="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && email.invalid }" email required>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && email.invalid">
+                        <p *ngIf="email.errors.email">Must be a valid email address</p>
+                        <p *ngIf="email.errors.required">Email is required</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="password" class="form-control" name="password" placeholder="mot de passe"
+                        [(ngModel)]="enseignant.password" #password="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && password.invalid }" minlength="6" required  pattern="[A-Z][A-z0-9]{6,}">
+                    <div *ngIf="addForm.submitted && password.invalid" class="invalid-feedback">
+                        <div *ngIf="password.errors.required">Password is required</div>
+                        <div *ngIf="password.errors.minlength">Password should be at least 6 characters long</div>
+                        <div *ngIf="password.errors.pattern">Password must contain at least one uppercase letter, one lowercase letter and one or more digits
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="password" class="form-control" name="ConfirmPassword" placeholder="Confirmer mot de passe"
+                        #confirm="ngModel"  [(ngModel)]="enseignant.confirmPassword" [ngClass]="{ 'is-invalid': addForm.submitted && confirm.invalid }" minlength="6"
+                        required >
+                    <div *ngIf="addForm.submitted && confirm.invalid" class="invalid-feedback">
+                          
+                        <div *ngIf="confirm.touched && confirm.errors.required">Password is required</div>
+                        
+                    </div>
+                    <div *ngIf="confirm.valid && confirm.value != password.value" class="text-danger">Password and confirm password is not equal</div>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <button type="button" class="btn btn-secondary #f48fb1 pink lighten-3" (click)="resetUserForm()">Annuler</button>
+                <button type="submit" class="btn btn-success #7e57c2 deep-purple lighten-1">Valider</button>
+            </div>
+        </div>
+    </div>
+</form>

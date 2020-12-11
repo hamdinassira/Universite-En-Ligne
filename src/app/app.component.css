@@ -1,0 +1,36 @@
+#bg { 
+    /* The image used */
+    background-image: url("../assets/banner.jpg");
+    background-image: url("../assets/book-1.jpg");
+    /* Full height */
+   height: auto; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+#bg1{
+  background-image: url("../assets/footer-bg.jpg");
+  
+  /* Full height */
+  height: auto; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+#footer{
+  background-image: url("../assets/footer-bg.jpg");
+  
+  /* Full height */
+  height: auto; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+  
