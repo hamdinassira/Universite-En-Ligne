@@ -20,7 +20,7 @@ export class SigninEnseignantComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /*login() {
+login() {
     this.authService
       .signIn(this.email, this.password)
       .then((result) => {
@@ -35,10 +35,10 @@ export class SigninEnseignantComponent implements OnInit {
         //this.toastr.error('Error!', erreur.message);
       });
   }
-*/
-  /*resetPwd() {
+
+  resetPwd() {
     this.authService.resetPassword(this.email).then(() => {
       alert('check you email');
     });
-  }*/
+  }
 }
