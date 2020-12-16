@@ -1,121 +1,127 @@
 
-<div class="mx-1 my-1 ">
-<!--Navbar-->
-<div id="bg1" >
-<mdb-navbar SideClass="navbar navbar-expand-lg px-5 py-4 mb-0" [containerInside]="false" >
+  <div class="mx-1 my-1 " id="bg2">
+    <!--Navbar-->
+    <div id="bg1">
+      <mdb-navbar SideClass="navbar navbar-expand-lg px-5 py-4 mb-0" [containerInside]="false">
 
-  <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+        <!-- Navbar brand -->
+        <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
 
-  <!-- Collapsible content -->
-  <links>
+        <!-- Collapsible content -->
+        <links>
 
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-    
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          Home<span class="sr-only">(current)</span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signupEtudiant">A propos de nous</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signupEtudiant">Historique</a>
-          <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signupEtudiant">Bibliotheque</a>
-          <div class="divider dropdown-divider"></div>
-        </div>
-      </li>
 
-      <!-- Dropdown -->
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          Programmes<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Licence</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Master</a>
-          
-          <div class="divider dropdown-divider"></div>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Formation</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Certification</a>
-        </div>
-      </li>
+            <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+                mdbWavesEffect>
+                Home<span class="sr-only">(current)</span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signupEtudiant">A propos de
+                  nous</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signupEtudiant">Historique</a>
+                <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signupEtudiant">Bibliotheque</a>
+                <div class="divider dropdown-divider"></div>
+              </div>
+            </li>
 
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          Connexion<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signinEtudiant">Etudiant</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signinEnseignant">Enseignant</a>
-          <div class="divider dropdown-divider"></div>
-        </div>
-      </li>
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          Inscription<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signupEtudiant"> Etudiant</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signupEnseignant">Enseignant</a>
-          <div class="divider dropdown-divider"></div>
-        </div>
-      </li>
-      <!-- Search form -->
-    <form class="form-inline waves-light" mdbWavesEffect>
-      <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+                mdbWavesEffect>
+                Programmes<span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Licence</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Master</a>
+
+                <div class="divider dropdown-divider"></div>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Formation</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Certification</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+                mdbWavesEffect>
+                Connexion<span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signinEtudiant">Etudiant</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signinEnseignant">Enseignant</a>
+                <div class="divider dropdown-divider"></div>
+              </div>
+            </li>
+            <li class="nav-item dropdown" dropdown>
+              <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+                mdbWavesEffect>
+                Inscription<span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signupEtudiant"> Etudiant</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signupEnseignant">Enseignant</a>
+                <div class="divider dropdown-divider"></div>
+              </div>
+            </li>
+            <!-- Search form -->
+            <form class="form-inline waves-light" mdbWavesEffect>
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              </div>
+            </form>
+
+          </ul>
+
+          <!-- Links -->
+
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="twitter"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="google-plus"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <div class="btn-group" mdbDropdown>
+                  <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </links>
+        <!-- Collapsible content -->
+
+      </mdb-navbar>
+      <!--/.Navbar-->
+    </div>
+
+
+    <div id="bg">
+      <div class="container mt-2">
+        <router-outlet></router-outlet>
       </div>
-    </form>
+    </div>
 
-    </ul>
-    
-    <!-- Links -->
-
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="twitter"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="google-plus"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <div class="btn-group" mdbDropdown>
-            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
-            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="divider dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </links>
-  <!-- Collapsible content -->
-
-</mdb-navbar>
-<!--/.Navbar-->
-</div>
+    <!-- Footer -->
+    <footer class="page-footer mt-2" id="footer">
 
 
-<div id="bg">
-<div class="container" >
-  <router-outlet></router-outlet>
-</div></div>
+      <!-- Footer Links -->
+      <div class=" text-center text-md-center row mx-auto" id="footer">
 
-<!-- Footer -->
-<footer class="page-footer " id="footer">
+        <!-- Grid row -->
 
-
-    <!-- Footer Links -->
-    <div class=" text-center text-md-center row mx-auto" id="footer">
-
-      <!-- Grid row -->
-      
 
         <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3" id="footer">
@@ -123,7 +129,8 @@
           <!-- Content -->
           <h6 class="text-uppercase  font-weight-bold">Company name</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing
+          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet,
+            consectetur adipisicing
             elit.
           </p>
 
@@ -181,7 +188,7 @@
           <h6 class="text-uppercase font-weight-bold">Contact</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block" style="width: 60px;">
           <p>
-            <mdb-icon fas icon="home" class="mr-3"></mdb-icon> Avenue de paris,1000 Tunis 
+            <mdb-icon fas icon="home" class="mr-3"></mdb-icon> Avenue de paris,1000 Tunis
           </p>
           <p>
             <mdb-icon fas icon="envelope" class="mr-3"></mdb-icon> info@success.com
@@ -195,17 +202,17 @@
         </div>
         <!-- Grid column -->
 
-      
-      <!-- Grid row -->
 
-    </div>
-    <!-- Footer Links -->
+        <!-- Grid row -->
 
-    <!-- Copyright --> 
-    <div class="footer-copyright text-center py-3" id="bg1">© 2020 Copyright reserved
-    </div>
-    <!-- Copyright -->
+      </div>
+      <!-- Footer Links -->
 
-  </footer>
-  <!-- Footer -->
-</div>
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3" id="bg1">© 2020 Copyright reserved
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+  </div>

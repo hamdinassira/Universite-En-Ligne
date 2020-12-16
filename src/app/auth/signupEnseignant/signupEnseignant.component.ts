@@ -22,7 +22,7 @@ export class SignupEnseignantComponent implements OnInit {
  save(){
   
    
-     this.ensignantService.AddStudent({ ...this.enseignant }).then((res) => {
+     this.ensignantService.AddEnseignant({ ...this.enseignant }).then((res) => {
       this.resetUserForm();
        //this.toastr.success('', 'étudiant ajouté avec succés');
      })

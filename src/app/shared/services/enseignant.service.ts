@@ -12,13 +12,10 @@ export class EnseignantService {
   constructor(private firestore: AngularFirestore, public afAuth: AngularFireAuth) { }
 
 
-  AddStudent( enseignant) {
-     if(this.enseignant.CIN == null){
+  AddEnseignant( enseignant) {
+     
     return this.firestore.collection('Enseignant').add(enseignant);}
-    else{
-      alert("cin existe")
-    }
-  }
+   
   
 
   signIn(email: string, password: string) {

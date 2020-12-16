@@ -3,34 +3,46 @@
     background-image: url("../assets/banner.jpg");
     background-image: url("../assets/book-1.jpg");
     /* Full height */
-   height: auto; 
+   
   
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color:transparent;
+    
+    
+    
+   
   }
 #bg1{
-  background-image: url("../assets/footer-bg.jpg");
+ /* background-image: url("../assets/footer-bg.jpg");
   
   /* Full height */
-  height: auto; 
+ /* height: auto; 
 
   /* Center and scale the image nicely */
-  background-position: center;
+ /* background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: auto;*/
+  background: linear-gradient(#e66465, #9198e5);
 
 }
+#bg2{
+  background: radial-gradient(ellipse at top, #e66465, transparent),
+            radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+}
 #footer{
-  background-image: url("../assets/footer-bg.jpg");
+
+  background: linear-gradient(#e66465, #9198e5);
+ /* background-image: url("../assets/footer-bg.jpg");
   
   /* Full height */
-  height: auto; 
+ /* height: auto; 
 
   /* Center and scale the image nicely */
-  background-position: center;
+  /*background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: auto;*/
 }
   
