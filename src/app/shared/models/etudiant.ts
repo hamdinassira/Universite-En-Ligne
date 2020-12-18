@@ -9,6 +9,7 @@ export class Etudiant {
     niveauEtude:string;
     diplome: string;
     email: string;
+    pseudo: string;
     Telephone: string;
     password: string;
     confirmPassword: string;

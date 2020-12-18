@@ -17,10 +17,10 @@
           <form>
             <div class="input-group form-group">
               <input
-                type="text"
+                type="email"
                 class="form-control"
                 placeholder="email"
-                [(ngModel)]="email"
+                [(ngModel)]="enseignant.email"
                 name="email"
               />
             </div>
@@ -30,7 +30,7 @@
                 class="form-control"
                 placeholder="password"
                 name="password"
-                [(ngModel)]="password"
+                [(ngModel)]="enseignant.password"
               />
             </div>
             <div class="row align-items-center remember">
@@ -41,14 +41,14 @@
                 type="button"
                 value="Login"
                 class="btn float-right btn-primary login_btn"
-                (click)="login()"
+                (click)="login()" [routerLink]="'/EspaceEnseignant'"
               />
             </div>
           </form>
         </div>
         <div class="card-footer">
           <div class="d-flex justify-content-center links">
-            Don't have an account? <a [routerLink]="'/register'"> Sign Up </a>
+            Don't have an account? <a [routerLink]="'/auth/signupEnseignant'"> Sign Up </a>
           </div>
           <div class="d-flex justify-content-center">
             <p class="text-white" style="cursor: pointer">

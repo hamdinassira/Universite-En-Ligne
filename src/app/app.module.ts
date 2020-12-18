@@ -16,6 +16,11 @@ import { SignupEtudiantComponent } from './auth/signupEtudiant/signupEtudiant.co
 //import { ToastrService } from 'ngx-toastr';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormationComponent } from './formation/formation.component';
+import { EspaceEtudiantComponent } from './registre/espace-etudiant/espace-etudiant.component';
+import { EspaceEnseignantComponent } from './registre/espace-enseignant/espace-enseignant.component';
+import { MasterComponent } from './formation/master/master.component';
+import { LicenceComponent } from './formation/licence/licence.component';
+import { CertificationComponent } from './formation/certification/certification.component';
 
 
 
@@ -26,7 +31,12 @@ import { FormationComponent } from './formation/formation.component';
     SignupEtudiantComponent,
     SigninEnseignantComponent,
     SignupEnseignantComponent,
-    FormationComponent,     
+    FormationComponent,
+    EspaceEtudiantComponent,
+    EspaceEnseignantComponent,
+    MasterComponent,
+    LicenceComponent,
+    CertificationComponent,     
   ],
   imports: [
     BrowserModule,

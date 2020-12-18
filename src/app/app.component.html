@@ -33,12 +33,12 @@
                 mdbWavesEffect>
                 Programmes<span class="caret"></span></a>
               <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Licence</a>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Master</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect routerLink="ListeLicence">Licence</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect routerLink="ListeMaster">Master</a>
 
                 <div class="divider dropdown-divider"></div>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Formation</a>
-                <a class="dropdown-item waves-light" mdbWavesEffect href="#">Certification</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect routerLink="ListeFormation">Formation</a>
+                <a class="dropdown-item waves-light" mdbWavesEffect routerLink="ListeCertif">Certification</a>
               </div>
             </li>
 
@@ -49,7 +49,7 @@
               <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
                 <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signinEtudiant">Etudiant</a>
                 <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signinEnseignant">Enseignant</a>
-                <div class="divider dropdown-divider"></div>
+               
               </div>
             </li>
             <li class="nav-item dropdown" dropdown>
@@ -59,7 +59,7 @@
               <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
                 <a class="dropdown-item waves-lightt" mdbWavesEffect routerLink="auth/signupEtudiant"> Etudiant</a>
                 <a class="dropdown-item waves-light" mdbWavesEffect routerLink="auth/signupEnseignant">Enseignant</a>
-                <div class="divider dropdown-divider"></div>
+                
               </div>
             </li>
             <!-- Search form -->
@@ -89,7 +89,7 @@
                 <div class="btn-group" mdbDropdown>
                   <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
                   <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#" *ngIf="isAuthenticated">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div class="divider dropdown-divider"></div>

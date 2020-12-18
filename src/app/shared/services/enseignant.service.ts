@@ -19,7 +19,7 @@ export class EnseignantService {
   }
 
   signIn(email: string, password: string) {
-    return this.afAuth.signInWithEmailAndPassword(email, password);
+    return this.afAuth.signInWithEmailAndPassword(this.enseignant.email, this.enseignant.password);
   }
 
   resetPassword(email: string) {

@@ -12,16 +12,14 @@ export class EtudiantService {
 
 
   AddStudent(etudiant: Etudiant) {
-      if(this.etudiant.CIN == null){
+    
     return this.firestore.collection('universite-en-ligne').add(etudiant);}
-    else{
-      alert("cin existe")
-    }
-  }
+    
+  
   
 
   signIn(email: string, password: string) {
-    return this.afAuth.signInWithEmailAndPassword(this.etudiant.email, this.etudiant.password);
+    return this.afAuth.signInWithEmailAndPassword(this.etudiant.pseudo, this.etudiant.password);
   }
 
   resetPassword(email: string) {

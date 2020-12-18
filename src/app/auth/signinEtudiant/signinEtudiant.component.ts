@@ -24,9 +24,9 @@ export class SigninEtudiantComponent implements OnInit {
   }
 
   login() {
-    this.authService.signIn(this.etudiant.email, this.etudiant.password)
+    this.authService.signIn(this.etudiant.pseudo, this.etudiant.password)
       .then((result) => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/EspaceEtudiant']);
         window.localStorage.set('user', result.user.email)
         //this.toastr.error('success!', "Login success");
 

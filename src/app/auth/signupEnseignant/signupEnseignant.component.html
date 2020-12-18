@@ -89,8 +89,17 @@
                         <p *ngIf="grade.errors.required">Grade is required</p>
                     </div>
                 </div>
+
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="pseudo" placeholder="pseudo"
+                        [(ngModel)]="enseignant.pseudo" #pseudo="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && pseudo.invalid }" email required>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && pseudo.invalid">
+                        <p *ngIf="pseudo.errors.required">Pseudo is required</p>
+                    </div>
+                </div>
             
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
                     <input type="email" class="form-control" name="email" placeholder="email"
                         [(ngModel)]="enseignant.email" #email="ngModel"
                         [ngClass]="{ 'is-invalid': addForm.submitted && email.invalid }" email required>
@@ -124,7 +133,7 @@
             </div>
             <div class="form-group text-right">
                 <button type="button" class="btn btn-secondary #f48fb1 pink lighten-3" (click)="resetUserForm()">Annuler</button>
-                <button type="submit" class="btn btn-success #7e57c2 deep-purple lighten-1">Valider</button>
+                <button type="submit" class="btn btn-success #7e57c2 deep-purple lighten-1" [routerLink]="'/auth/signinEnseignant'">Valider</button>
             </div>
         </div>
     </div>

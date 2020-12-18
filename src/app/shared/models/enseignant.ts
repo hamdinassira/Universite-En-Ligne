@@ -8,6 +8,7 @@ export class Enseignant {
     pays: string;
     grade: string;
     email: string;
+    pseudo: string;
     Telephone: string;
     password: string;
     confirmPassword: string;

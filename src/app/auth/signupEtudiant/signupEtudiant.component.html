@@ -89,8 +89,17 @@
                         <p *ngIf="diplome.errors.required">Diplome is required</p>
                     </div>
                 </div>
+
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" name="pseudo" placeholder="pseudo"
+                        [(ngModel)]="etudiant.pseudo" #pseudo="ngModel"
+                        [ngClass]="{ 'is-invalid': addForm.submitted && pseudo.invalid }"  required>
+                    <div class="invalid-feedback" *ngIf="addForm.submitted && pseudo.invalid">
+                        <p *ngIf="pseudo.errors.required">Pseudo is required</p>
+                    </div>
+                </div>
             
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-6">
                     <input type="email" class="form-control" name="email" placeholder="email"
                         [(ngModel)]="etudiant.email" #email="ngModel"
                         [ngClass]="{ 'is-invalid': addForm.submitted && email.invalid }" email required>

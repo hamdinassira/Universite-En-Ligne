@@ -12,7 +12,6 @@ export class SignupEnseignantComponent implements OnInit {
   public enseignant=new Enseignant();
   @ViewChild('addForm')
   addForm: NgForm;
-  cin: NgModel;
  
   enseignant1: Enseignant
  constructor(public ensignantService: EnseignantService) { }
@@ -20,16 +19,16 @@ export class SignupEnseignantComponent implements OnInit {
  ngOnInit(): void {
  }
  save(){
-  
    
      this.ensignantService.AddEnseignant({ ...this.enseignant }).then((res) => {
       this.resetUserForm();
-       //this.toastr.success('', 'étudiant ajouté avec succés');
+       
      })
    
  }
 
    resetUserForm(){
+
      this.addForm.resetForm();
    }
 
